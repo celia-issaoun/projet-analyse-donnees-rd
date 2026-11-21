@@ -1,33 +1,39 @@
 
 # Analyse et automatisation des données rhéologiques
 
-### Projet Data Analyst R&D — Python | Streamlit | Statistiques
+### Projet Data Analyst R&D | Python • Streamlit • Statistiques
 
-**Projet réalisé dans le cadre de mon stage de fin d'études
-au sein du centre R&D du Groupe Bel — 2026.**
+**Stage de fin d'études — Groupe Bel | 2026**
 
 ---
 
 ## 1. Présentation du projet
 
 Dans le cadre de mon stage de fin d'études au sein
-du Groupe Bel, j'ai travaillé sur l'amélioration
-et l'automatisation du traitement de données
-scientifiques issues d'analyses rhéologiques.
+du centre de Recherche et Développement du Groupe Bel,
+j'ai travaillé sur l'automatisation du traitement
+et de l'analyse de données scientifiques issues
+de mesures rhéologiques.
 
 Les analyses rhéologiques permettent d'étudier
 le comportement des matériaux et leurs propriétés
 mécaniques dans différentes conditions expérimentales.
 
-L'objectif de mon projet était de développer
-une solution permettant de faciliter l'exploitation
-des données, d'automatiser l'extraction d'indicateurs
-et d'améliorer la reproductibilité des analyses.
+Le traitement de ces données nécessite plusieurs
+étapes : préparation des fichiers, extraction
+des paramètres caractéristiques, visualisation
+des courbes et interprétation des résultats.
+
+L'objectif de ce projet était de développer
+une solution permettant de simplifier et
+d'automatiser ces traitements, tout en améliorant
+leur fiabilité et leur reproductibilité.
 
 Pour répondre à ces besoins, j'ai développé
 une application web interactive avec Python
-et Streamlit, destinée à faciliter le travail
-des équipes scientifiques.
+et Streamlit, permettant aux utilisateurs
+d'effectuer différentes analyses sans avoir
+à exécuter directement du code Python.
 
 ---
 
@@ -35,17 +41,19 @@ des équipes scientifiques.
 
 Les principaux objectifs étaient :
 
-- Automatiser le traitement des fichiers expérimentaux.
+- Automatiser le traitement des données expérimentales.
 - Réduire les opérations manuelles répétitives.
-- Standardiser les méthodes d'analyse.
+- Standardiser les méthodes d'extraction.
 - Extraire automatiquement des indicateurs pertinents.
-- Visualiser les courbes et les résultats.
-- Réaliser des analyses statistiques.
-- Faciliter la comparaison des échantillons.
+- Faciliter la visualisation et l'interprétation
+  des résultats.
+- Intégrer des méthodes d'analyse statistique.
 - Améliorer la fiabilité et la reproductibilité
   des traitements.
-- Proposer une interface accessible aux utilisateurs
-  ne maîtrisant pas nécessairement Python.
+- Développer une interface simple et accessible
+  aux utilisateurs scientifiques.
+- Faciliter l'exportation et la comparaison
+  des résultats.
 
 ---
 
@@ -53,318 +61,348 @@ Les principaux objectifs étaient :
 
 | Technologie | Utilisation |
 |------------|-------------|
-| Python | Programmation et automatisation |
-| Pandas | Manipulation et structuration des données |
+| Python | Développement et automatisation |
+| Pandas | Nettoyage et structuration des données |
 | NumPy | Calculs numériques |
-| SciPy | Calculs scientifiques et statistiques |
+| SciPy | Calculs scientifiques et tests statistiques |
 | Matplotlib | Visualisation des données |
 | Streamlit | Développement de l'application web |
 | Excel | Importation et exportation des résultats |
-| Jupyter Notebook | Développement et expérimentation |
+| Jupyter Notebook | Exploration et développement |
 | GitLab | Gestion du projet et déploiement |
 
 ---
 
-## 4. Présentation de l'application Streamlit
+## 4. Développement de l'application Streamlit
 
-L'application a été conçue pour permettre
-aux utilisateurs d'importer des fichiers
-de mesures et de réaliser différentes analyses
-à partir d'une interface interactive.
+Afin de faciliter l'utilisation des traitements,
+j'ai développé une application web interactive
+avec Streamlit.
 
-Elle regroupe plusieurs fonctionnalités
-d'extraction, de visualisation et de comparaison
-des résultats.
+L'application centralise plusieurs fonctionnalités
+d'analyse des données rhéologiques et permet
+aux utilisateurs d'importer directement
+leurs fichiers expérimentaux.
 
-### Interface principale
+### Fonctionnalités principales
+
+- Importation de plusieurs fichiers Excel.
+- Identification des données nécessaires aux analyses.
+- Sélection des traitements à effectuer.
+- Extraction automatique des indicateurs.
+- Génération de graphiques.
+- Affichage des résultats sous forme de tableaux.
+- Comparaison de plusieurs échantillons.
+- Réalisation d'analyses statistiques.
+- Exportation des résultats vers Excel.
+
+### Aperçu de l'interface
 
 ![Interface principale](images/interface_principale.png)
 
-*Capture de l'interface générale de l'application.*
+*Interface générale de l'application Streamlit.*
 
-### Principales fonctionnalités
+### Interface des fonctionnalités
 
-- Importation de fichiers expérimentaux.
-- Sélection du type d'analyse.
-- Extraction automatique d'indicateurs.
-- Visualisation interactive des courbes.
-- Présentation des résultats sous forme de tableaux.
-- Exportation des résultats vers Excel.
+![Fonctionnalités](images/interface_fonctionnalites.png)
+
+*Présentation des différents traitements disponibles.*
 
 ---
 
-## 5. Analyse des courbes de refonte
+## 5. Traitement et analyse des données rhéologiques
 
-### Objectif
+Dans le cadre de ce projet, j'ai développé
+plusieurs fonctionnalités permettant d'automatiser
+l'exploitation de données issues d'analyses
+rhéologiques.
 
-L'analyse de refonte consiste à étudier
-l'évolution des propriétés viscoélastiques
-d'un échantillon en fonction de la température.
+Les principaux travaux réalisés comprennent :
 
-Les principales mesures étudiées sont :
+- **Analyse de refonte :** traitement des courbes
+  rhéologiques, extraction des paramètres
+  caractéristiques et identification automatique
+  des températures de transition.
 
-- G' : module de conservation.
-- G'' : module de perte.
-- tan δ : rapport entre G'' et G'.
+- **Analyse de cassure :** exploitation des courbes
+  couple-déplacement et contrainte-déformation
+  pour identifier et extraire les paramètres
+  caractéristiques de cassure.
 
-### Méthodologie
+- **Analyse de viscosité :** traitement des données
+  de viscosité en fonction du temps et du gradient
+  de cisaillement, visualisation des courbes
+  et identification des changements de comportement.
 
-Le traitement comprend notamment :
+- **Détection des transitions :** développement
+  de traitements permettant d'identifier
+  des changements de régime à partir
+  de l'analyse des courbes et des intersections
+  de droites ou de tangentes.
 
-1. Importation des données expérimentales.
-2. Identification des mesures disponibles.
-3. Préparation des courbes.
-4. Analyse des variations de comportement.
-5. Détection des changements de régime.
-6. Extraction des températures caractéristiques.
-7. Visualisation des résultats.
+- **Automatisation :** développement de fonctions
+  Python pour traiter plusieurs fichiers,
+  organiser les répétitions et standardiser
+  l'extraction des indicateurs.
 
-Une partie du travail repose sur l'identification
-de zones de comportement et l'utilisation
-d'intersections de droites ou de tangentes
-pour déterminer des transitions.
+- **Visualisation et exportation :** génération
+  de graphiques et de tableaux récapitulatifs,
+  avec possibilité d'exporter les résultats
+  vers Excel.
 
-### Visualisation des courbes
+### Exemples de visualisations
 
-![Courbes de refonte](images/refonte_courbes.png)
+![Visualisation des analyses](images/visualisation_courbes.png)
 
-*Exemple de visualisation des mesures rhéologiques.*
+*Exemple de visualisation de courbes rhéologiques.*
 
-### Détection des transitions
+### Extraction automatique des paramètres
 
-![Transitions](images/refonte_transitions.png)
+![Extraction des paramètres](images/extraction_parametres.png)
 
-*Illustration de la détection des températures
-caractéristiques par intersection de droites.*
+*Exemple de détection de paramètres caractéristiques
+sur les courbes.*
 
-### Extraction des résultats
+### Tableaux des résultats
 
-![Résultats de refonte](images/refonte_resultats.png)
+![Résultats des analyses](images/resultats_analyses.png)
 
-*Exemple de tableau récapitulatif des températures
-extraites automatiquement.*
-
-### Résultats obtenus
-
-Cette fonctionnalité permet notamment :
-
-- D'identifier plusieurs transitions sur une courbe.
-- D'extraire automatiquement les températures associées.
-- De visualiser les zones et les intersections détectées.
-- De comparer les résultats entre différents fichiers.
-- De centraliser les indicateurs dans un tableau.
-
----
-
-## 6. Analyse des données de cassure
-
-### Objectif
-
-Cette analyse vise à identifier des paramètres
-caractéristiques du comportement mécanique
-des échantillons.
-
-Deux types de représentations peuvent être utilisés :
-
-- Couple en fonction du déplacement.
-- Contrainte en fonction de la déformation.
-
-### Méthodologie
-
-Le traitement comprend :
-
-1. Importation des fichiers.
-2. Identification automatique des colonnes utiles.
-3. Extraction des paramètres de cassure.
-4. Organisation des résultats par échantillon
-   et répétition.
-5. Visualisation des courbes.
-6. Exportation des indicateurs.
-
-### Visualisation
-
-![Analyse de cassure](images/cassure_courbes.png)
-
-*Exemple de visualisation des courbes de cassure.*
-
-### Tableau des résultats
-
-![Résultats de cassure](images/cassure_resultats.png)
-
-*Exemple de tableau des paramètres extraits.*
-
-### Résultats obtenus
-
-L'automatisation facilite :
-
-- L'extraction des paramètres caractéristiques.
-- Le traitement de plusieurs répétitions.
-- La comparaison des échantillons.
-- La structuration des résultats.
-- La réduction des traitements manuels.
+*Exemple de tableau récapitulatif des indicateurs
+extraits automatiquement.*
 
 ---
 
-## 7. Analyse de viscosité
+## 6. Analyses statistiques et comparaison des échantillons
 
-### Objectif
+### 6.1. Objectif
 
-L'analyse de viscosité permet d'étudier
-l'évolution du comportement d'un échantillon
-en fonction du temps ou du gradient
-de cisaillement.
+Une partie du projet a été consacrée à l'analyse
+statistique des paramètres extraits afin
+d'étudier la variabilité des mesures et
+de comparer différents groupes d'échantillons.
 
-### Méthodologie
+L'objectif était de compléter les observations
+graphiques et les statistiques descriptives
+par des méthodes statistiques permettant
+d'évaluer la significativité des différences
+observées entre les groupes.
 
-Les fonctionnalités développées comprennent :
+En effet, les différences constatées entre
+plusieurs moyennes ne permettent pas,
+à elles seules, de conclure à l'existence
+d'une différence statistiquement significative.
 
-- L'importation des mesures.
-- L'identification des colonnes pertinentes.
-- La préparation des données.
-- La visualisation des courbes.
-- L'analyse des changements de comportement.
-- L'extraction de paramètres caractéristiques.
+### 6.2. Préparation des données
 
-Pour certaines analyses, des intersections
-de tangentes permettent d'identifier
-des transitions sur les courbes.
+Avant de réaliser les analyses statistiques,
+plusieurs étapes de préparation ont été effectuées :
 
-### Visualisation viscosité-temps
+- Regroupement des données par échantillon.
+- Identification et organisation des répétitions.
+- Vérification des valeurs disponibles.
+- Structuration des tableaux de résultats.
+- Préparation des variables à comparer.
 
-![Viscosité en fonction du temps](images/viscosite_temps.png)
+Ces traitements permettent de disposer
+de données structurées et adaptées
+aux méthodes statistiques utilisées.
 
-*Exemple de courbe viscosité-temps.*
+### 6.3. Statistiques descriptives
 
-### Analyse des transitions
+Une première analyse descriptive permet
+de résumer les données et d'étudier
+leur variabilité.
 
-![Transitions de viscosité](images/viscosite_transitions.png)
+Les principaux indicateurs utilisés sont :
 
-*Exemple de détection des changements de régime.*
+- Nombre d'observations.
+- Moyenne.
+- Écart-type.
+- Dispersion des mesures.
 
-### Résultats
+Ces indicateurs permettent de comparer
+les caractéristiques générales des groupes
+et de mettre en évidence les premières
+différences observées.
 
-![Résultats viscosité](images/viscosite_resultats.png)
+Cependant, les statistiques descriptives
+ne suffisent pas à déterminer si les différences
+entre les groupes sont statistiquement
+significatives.
 
-*Exemple de tableau des paramètres extraits.*
+### 6.4. Tests statistiques
 
----
+Afin d'approfondir les comparaisons,
+différents tests statistiques ont été intégrés
+aux traitements.
 
-## 8. Analyses statistiques
+#### Test de Levene
 
-### Objectif
+Le test de Levene permet d'évaluer
+l'homogénéité des variances entre
+plusieurs groupes.
 
-Au-delà de l'extraction des indicateurs,
-le projet comprend une partie statistique
-permettant d'étudier les différences
-entre plusieurs groupes d'échantillons.
+Il est utilisé pour vérifier si les variances
+peuvent être considérées comme homogènes
+et orienter le choix de la méthode
+de comparaison des moyennes.
 
-### Méthodes utilisées
+#### Analyse de variance (ANOVA)
 
-Selon les données et les conditions
-d'application, les analyses peuvent comprendre :
+L'analyse de variance permet de comparer
+les moyennes de plusieurs groupes.
 
-- Statistiques descriptives.
-- Calcul des moyennes et écarts-types.
-- Étude de la dispersion des mesures.
-- Test de Levene pour l'homogénéité des variances.
-- Analyse de variance (ANOVA).
-- ANOVA de Welch lorsque les variances
-  ne sont pas homogènes.
-- Visualisation des résultats par groupe.
+Lorsque les conditions d'application
+sont satisfaites, elle permet de tester
+l'hypothèse selon laquelle les moyennes
+des groupes sont égales.
 
-### Visualisation statistique
+Un résultat statistiquement significatif
+indique qu'au moins une moyenne diffère
+des autres, sans nécessairement identifier
+directement les groupes concernés.
 
-![Comparaison statistique](images/statistiques_graphique.png)
+#### ANOVA de Welch
 
-*Exemple de comparaison des groupes.*
+Lorsque l'hypothèse d'homogénéité
+des variances n'est pas satisfaite,
+l'ANOVA de Welch peut être utilisée.
 
-### Résultats des tests
+Cette méthode est adaptée à la comparaison
+des moyennes lorsque les variances
+des groupes sont inégales.
+
+Le choix du test permet ainsi de tenir
+compte des caractéristiques des données
+et de produire une analyse statistique
+plus adaptée.
+
+### 6.5. Visualisation des résultats statistiques
+
+Les résultats statistiques sont présentés
+sous forme de graphiques et de tableaux
+afin de faciliter leur interprétation
+par les experts scientifiques.
+
+Les visualisations permettent notamment :
+
+- De comparer les moyennes entre les groupes.
+- De représenter la variabilité des mesures.
+- De visualiser les écarts observés.
+- De faciliter l'interprétation des résultats
+  des tests statistiques.
+
+#### Comparaison des moyennes
+
+![Graphique statistique](images/statistiques_graphique.png)
+
+*Exemple de comparaison des moyennes avec
+représentation de la variabilité des mesures.*
+
+#### Résultats des tests statistiques
 
 ![Résultats statistiques](images/statistiques_resultats.png)
 
-*Exemple de tableau des résultats statistiques.*
+*Exemple de tableau récapitulatif des résultats
+des tests statistiques.*
 
-### Intérêt
+### 6.6. Apports des analyses statistiques
 
-Cette partie permet :
+Cette partie du projet permet :
 
-- De résumer les mesures.
-- D'étudier la variabilité des résultats.
-- De comparer plusieurs groupes.
-- D'évaluer statistiquement certaines différences.
+- De compléter les analyses descriptives
+  par des tests statistiques.
+- D'étudier la variabilité des mesures.
+- De comparer plusieurs groupes d'échantillons.
+- D'adapter les méthodes statistiques
+  aux caractéristiques des données.
 - De faciliter l'interprétation des résultats.
+- De communiquer les conclusions de manière
+  claire aux experts scientifiques.
 
 ---
 
-## 9. Résultats et apports du projet
+## 7. Résultats et apports du projet
 
 Le développement de cette application
-a permis de mettre en place une solution
-centralisant plusieurs traitements de données
-scientifiques.
+a permis de centraliser plusieurs traitements
+de données scientifiques dans une interface unique.
 
-### Automatisation
+### Automatisation des traitements
 
-Des traitements auparavant réalisés
-manuellement peuvent être exécutés
-à partir de l'application.
+Des opérations auparavant réalisées
+manuellement peuvent être automatisées,
+ce qui facilite le traitement de plusieurs
+fichiers expérimentaux.
 
-### Standardisation
+### Fiabilité et reproductibilité
 
-Les méthodes d'extraction sont intégrées
-dans des traitements reproductibles.
+L'utilisation de fonctions Python permet
+de standardiser les traitements et
+d'appliquer des méthodes cohérentes
+aux différentes données analysées.
 
-### Visualisation
+### Extraction des indicateurs
 
-Les utilisateurs disposent de graphiques
-pour examiner les courbes et les paramètres
-extraits.
+Les paramètres caractéristiques sont
+extraits automatiquement et organisés
+dans des tableaux récapitulatifs.
 
-### Exploitation des résultats
+### Visualisation des données
 
-Les indicateurs sont organisés dans
-des tableaux et peuvent être exportés
-pour des analyses complémentaires.
+Les graphiques facilitent l'exploration
+des mesures et l'interprétation
+des résultats.
+
+### Analyse statistique
+
+L'intégration des méthodes statistiques
+permet d'approfondir les comparaisons
+entre les échantillons.
 
 ### Accessibilité
 
-L'interface Streamlit facilite l'utilisation
-des traitements sans nécessiter
-l'exécution directe de scripts Python.
+L'interface Streamlit facilite
+l'utilisation des traitements par
+des experts scientifiques ne maîtrisant
+pas nécessairement la programmation Python.
 
 ---
 
-## 10. Collaboration et déploiement
+## 8. Collaboration et déploiement
 
 Le projet a été réalisé en collaboration
-avec différents interlocuteurs :
+avec les équipes scientifiques et Data.
 
-- Experts scientifiques R&D.
-- Équipes Data.
-- Équipe informatique (IT).
+Les échanges avec les experts métier
+ont permis de :
 
-Ces échanges ont permis de mieux comprendre
-les besoins des utilisateurs, de valider
-les résultats et de préparer la mise
-à disposition de l'application.
+- Comprendre les besoins liés aux analyses.
+- Identifier les paramètres à extraire.
+- Adapter les traitements aux données.
+- Vérifier et valider les résultats.
+- Améliorer la présentation des visualisations.
+- Faciliter l'utilisation de l'application.
 
-Le projet a également impliqué l'utilisation
-de GitLab dans le cadre de son déploiement.
+L'application a également été intégrée
+dans un environnement GitLab dans le cadre
+de sa mise à disposition des utilisateurs.
 
 ---
 
-## 11. Compétences développées
+## 9. Compétences développées
 
 ### Compétences techniques
 
+- Analyse et traitement de données scientifiques.
 - Programmation Python.
-- Traitement de données scientifiques.
-- Automatisation des analyses.
-- Développement d'applications Streamlit.
+- Nettoyage et structuration des données.
+- Automatisation des traitements.
 - Extraction d'indicateurs.
-- Visualisation de données.
 - Analyses statistiques.
-- Gestion et structuration des résultats.
+- Visualisation de données.
+- Développement d'applications Streamlit.
+- Gestion des fichiers Excel.
 - Utilisation de GitLab.
 
 ### Compétences transversales
@@ -375,57 +413,55 @@ de GitLab dans le cadre de son déploiement.
 - Collaboration avec des équipes
   pluridisciplinaires.
 - Communication des résultats.
-- Adaptation à un domaine scientifique
-  spécialisé.
+- Vulgarisation des analyses statistiques.
+- Adaptation à un environnement R&D.
 
 ---
 
-## 12. Confidentialité
+## 10. Confidentialité
 
-Ce dépôt a pour objectif de présenter
-les compétences techniques et les méthodes
-mobilisées dans le cadre du projet.
+Ce dépôt présente une synthèse des travaux
+et des compétences développées dans
+le cadre de ce projet.
 
 Le code source de l'application, les données
 expérimentales internes et les informations
 confidentielles du Groupe Bel ne sont
 pas publiés.
 
-Les éventuelles visualisations présentées
-dans ce dépôt doivent être autorisées
-pour diffusion publique ou réalisées
-à partir de données entièrement fictives.
+Les illustrations présentées sont
+des exemples de démonstration autorisés
+pour diffusion publique ou réalisés
+à partir de données fictives.
 
 ---
 
-## 13. À propos
+## 11. À propos
 
 **Celia ISSAOUN**
 
-Data Analyst Junior
+**Data Analyst Junior**
 
-Master 2 Statistiques Appliquées et
-Analyse Décisionnelle
+Diplômée d'un Master 2 Mathématiques appliquées,
+statistiques — parcours Statistiques Appliquées
+et Analyse Décisionnelle.
 
-Université de Caen Normandie — 2026
+Université de Caen Normandie — 2026.
 
-### Liens
+Spécialisée dans le traitement, l'analyse
+statistique et la visualisation des données,
+avec un intérêt particulier pour l'automatisation
+et le développement de solutions facilitant
+l'exploitation des données.
 
-- Portfolio :
-  https://celia-issaoun.github.io/
+### Me retrouver
 
-- GitHub :
-  https://github.com/celia-issaoun
-
-- LinkedIn :
-  https://www.linkedin.com/in/celia-issaoun/
-
-- E-mail :
-  issaouncelia21@gmail.com
+- **GitHub :** https://github.com/celia-issaoun
+- **Portfolio :** https://celia-issaoun.github.io/
 
 ---
 
-*Projet présenté à des fins de valorisation
-des compétences professionnelles.
-Le code source et les données internes
+*Projet présenté dans le cadre de la valorisation
+de mes compétences professionnelles.
+Le code source et les données confidentielles
 ne sont pas accessibles publiquement.*
