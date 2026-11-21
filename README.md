@@ -73,7 +73,7 @@ Cette application centralise plusieurs fonctionnalités d'analyse des données r
 
 ### Aperçu de l'interface
 
-![Interface principale de l'application](images/interface_principal.png)
+![Interface principale de l'application](visualisations/interface_principal.png)
 
 *Interface générale de l'application Streamlit développée pour automatiser le traitement et l'analyse des données rhéologiques.*
 
@@ -183,7 +183,7 @@ Les visualisations permettent notamment :
 
 #### Comparaison des moyennes et des écarts-types
 
-![Comparaison des moyennes et des écarts-types](images/moyenne_ecart.png)
+![Comparaison des moyennes et des écarts-types](visualisations/moyenne_ecart.png)
 
 *Visualisation comparative des moyennes et de la dispersion des mesures entre différents groupes d'échantillons.*
 
@@ -193,7 +193,7 @@ Les barres d'erreur facilitent l'interprétation des résultats expérimentaux, 
 
 #### Étude de la relation entre deux variables : couple et déplacement
 
-![Relation entre le couple et le déplacement](images/relation.png)
+![Relation entre le couple et le déplacement](visualisations/relation.png)
 
 *Visualisation de la relation entre le couple et le déplacement à partir des mesures expérimentales.*
 
